@@ -1,0 +1,105 @@
+<html>
+<head><title>alumni registration form</title>
+
+
+<style>
+
+ 
+body{
+background:linear-gradient(to left,#ffff1c, #00c3ff 100%);
+} </style>
+ <script type="text/javascript">
+ function validate()
+{
+var pass=document.getElementById("password").value;
+var cpass=document.getElementById("confirm_password").value;
+if(pass!=cpass)
+{
+alert("password not match");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<form action="alu_reg.php" method="post">
+<center>
+<h2 >ALUMNI REGISTRATION FORM</h2>
+<table align="center" border="1" >
+<tr>
+<td>Alumni Name</td>
+<td><input type="text" name="alu_name" pattern="[A-Za-z]+{3,30}" required placeholder="Enter name"></td>
+</tr>
+<tr>
+<td>Father's Name</td>
+<td><input type="text" name="f_name" pattern="[A-Za-z]+{3,30}" required placeholder="Enter father name"></td>
+<tr>
+<tr>
+<td>Date of Birth(YYYY/MM/DD)</td>
+<td><input type="text"  name="dob" placeholder="YYYY/MM/DD">
+       </td>
+</tr>
+<tr>
+<td>Course</td>
+<td><input type="text" name="course" required pattern="[A-Za-z]+{3,}" placeholder="Enter course"></td>
+</tr>
+<tr>
+<td>Year of Passing out(YYYY/MM/DD)</td>
+<td><input type="text" name="yop" required placeholder="YYYY/MM/DD"></td>
+</tr>
+<tr>
+<td>Department</td>
+<td><input type="text" name="dept" required pattern="[A-Za-z]+{3,}" placeholder="Enter department"></td>
+</tr>
+<tr>
+<td>Permanent Address</td>
+<td><textarea name="p_add" required placeholder="Enter permanent address"></textarea></td>
+</tr>
+<tr>
+<td>Mobile number</td>
+<td><input type="text" name="c_no" required pattern="[0-9]{10}" placeholder="Enter contact no"></td>
+</tr>
+<tr>
+<td>Alternate number</td>
+<td><input type="text" name="m_no" required pattern="[0-9]{10}" placeholder="Enter mobile no"></td>
+</tr>
+<tr>
+<td>E-mail ID</td>
+<td><input type="text" name="e_id" placeholder="Optional" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"></td>
+</tr>
+<tr>
+<td>Present Organization</td>
+<td><input type="text" name="p_org" required pattern="[A-Za-z]+{3,}"placeholder="Organization name"></td>
+</tr>
+<tr>
+<td>Designation</td>
+<td><input type="text" name="design" required pattern="[A-Za-z]+{3,}" placeholder="Enter designation" ></td>
+</tr>
+<tr>
+<td>Present Location</td>
+<td><input type="text" name="p_loc" required placeholder="Enter your location"></td>
+</tr>
+<tr><td>
+UserName</td><td>
+<input type="text" name="uname" placeholder="Enter Username " required pattern="[A-Za-z]+{3,20}">
+</td></tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="password" id="password" required placeholder="Create Password"/></td>
+</tr>
+<tr>
+<td>Confirm Password</td>
+<td><input type="password" name="confirm_password" required placeholder="Re-enter password"id="confirm_password"/></td>
+</tr>
+<tr>
+<td colspan="2"><center><input type="submit" name="submit" value="Submit" onclick="return validate()">
+<input type="reset" name="reset" value="Reset"></center></td>
+</tr>
+</table>
+<a href="alu.html">Already registered click here to login</a> 
+
+</center>
+</form>
+</body>
+</html>

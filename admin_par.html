@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Student Registration form</title>
+<style>
+.table
+{
+margin-left:30%;
+margin-right:30%;
+margin-top:5%;
+border-style:ridge;
+}
+body{
+background:linear-gradient(to left,#ffff1c, #00c3ff 100%);
+}
+</style>
+</head>
+<body>
+<form action="admin_par.php" method="post" >
+<div class="table">
+<center>
+<h3 style="color:blue">Admin Login Form</h3>
+<table cellpadding=15>
+<td>UserName:</td>
+<td><input type="text"required  placeholder="enter user name" name="uname" required pattern="[A-Za-z]{3,20}" ></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" required name="password" placeholder="enter ur Password" required size="15" pattern="[A-Za-z]{5,15}" title="Password must be min 5 max 15 characters"></td>
+</tr>
+<tr>
+<td><input type="submit" name="submit" value="Submit" align="center"></td>
+<td><input type="reset" name="reset" value="Reset"></td>
+</tr>
+</table>
+</div>
+</center>
+</form>
+</body>
+</html>
+
+
+
+
+
+

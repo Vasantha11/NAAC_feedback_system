@@ -1,0 +1,92 @@
+<html>
+<head> <title>employee registration</title>
+<style>
+
+ 
+ 
+body{
+background:linear-gradient(to left,#ffff1c, #00c3ff 100%);
+}
+ </style>
+ <script type="text/javascript">
+ function validate()
+{
+var pass=document.getElementById("password").value;
+var cpass=document.getElementById("confirm_password").value;
+if(pass!=cpass)
+{
+alert("password not match");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<h2 align="center">Employee Registration Form</h2>
+<form action="emp_reg.php" method="post">
+<center>
+<table align="center" border="1" >
+<tr>
+<td>Employee Name:</td>
+<td><input type="text" name="emp_name"  pattern="[A-Za-z]+{3,30}" required placeholder="enter your name" ></td>
+</tr>
+<tr>
+<td>Designation:</td>
+<td><input type="text" name="desig" pattern="[A-Za-z]+{3,30}" required placeholder="enter your designation"></td>
+</tr>
+<tr>
+<td>Employee status:</td>
+<td>full time:
+<input type="radio" name="emp_status" value="full_time" required>
+part time:
+<input type="radio" name="emp_status" value="part_time" required>
+</td>
+</tr>
+<tr>
+<td>Department:</td>
+<td><select name="dept">
+<option value=>--Select--</option>
+<option value="CSE">CSE</option>
+<option value="CIVIL">CIVIL</option>
+<option value="MECH">MECH</option>
+<option value="ECE">ECE</option>
+<option value="EEE">EEE</option></td>
+</tr>
+<tr>
+<td>Address for correspondence:</td>
+<td><input type="text" name="address"pattern="[A-Za-z0-9]+{3,25}" required placeholder="enter your address"></td>
+</tr>
+<tr>
+<td>Email Id:</td>
+<td><input type="text" name="e_id"  placeholder="optional"pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"></td>
+</tr>
+<tr><td>Mobile no:</td><td>
+<input type="text" name="m_num"  pattern="[0-9]{10}"  placeholder="enter your mobile no"></td>
+</tr>
+<tr><td>UserName:</td><td>
+<input type="text" name="uname" placeholder="enter username " required pattern="[A-Za-z]+{3,20}">
+</td></tr>
+<tr>
+<td>Password</td>
+<td><input type="password"  required placeholder="create password"id="password" name="password"/></td>
+</tr>
+<tr>
+<td>Confirm Password</td>
+<td><input type="password" required placeholder="re-enter password"id="confirm_password" name="confirm_password"/></td>
+</tr>
+<tr>
+<td><input type="submit" name="submit" value="submit" onclick="return validate()"></td>
+<td><input type="reset" value="reset"></td></tr>
+
+
+</table>
+ <a href="emploe.html">Already registered click here to login</a>
+
+</center>
+</form>
+
+
+</body>
+</html>
+
